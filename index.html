@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Babita's Pickles - Nepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    
+    <style>
+        body {
+            background-color: #fff9e6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: url('banner.jpg') center/cover no-repeat;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 18px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .fancy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .fancy-button:hover {
+            background-color: #388E3C;
+            transform: scale(1.05);
+        }
+
+        .product-images, .featured-pickles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .product-image {
+            width: 200px;
+            height: auto;
+            margin: 15px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+        }
+
+        .featured-pickles h2 {
+            width: 100%;
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            .fancy-button {
+                width: 80%;
+                padding: 14px 0;
+            }
+            .product-image {
+                width: 150px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Banner Image -->
+<div class="banner"></div>
+
+<header>
+    <h1>Babita's Pickles</h1>
+    <p>Fresh, Homemade, and Delicious! 🥒❤️ From Nepal 🇳🇵</p>
+</header>
+
+<div class="container">
+    <p>Discover our tasty pickles, made with love and care in Nepal.</p>
+
+    <!-- Buttons -->
+    <button class="fancy-button" onclick="scrollToProducts()">View Products</button>
+    <button class="fancy-button" onclick="orderNow()">Order Now</button>
+    <button class="fancy-button" onclick="contactUs()">Contact Us</button>
+
+    <!-- Product Images -->
+    <div id="products" class="product-images">
+        <img class="product-image" src="pickle1.jpg" alt="Pickle Jar 1">
+        <img class="product-image" src="pickle2.jpg" alt="Pickle Jar 2">
+        <img class="product-image" src="pickle3.jpg" alt="Pickle Jar 3">
+        <img class="product-image" src="pickle4.jpg" alt="Pickle Jar 4">
+    </div>
+
+    <!-- Featured Pickles Section -->
+    <div class="featured-pickles">
+        <h2>Featured Pickles 🥒</h2>
+        <img class="product-image" src="special1.jpg" alt="Special Pickle 1">
+        <img class="product-image" src="special2.jpg" alt="Special Pickle 2">
+    </div>
+</div>
+
+<footer>
+    <p>Contact us: +977-XXXXXXXXX | babitaspickles@example.com</p>
+    <p>
+        Follow us: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">WhatsApp</a>
+    </p>
+</footer>
+
+<script>
+    function scrollToProducts() {
+        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function orderNow() {
+        // Replace your WhatsApp number here
+        window.open('https://wa.me/977XXXXXXXXX?text=Hi%20Babita,%20I%20want%20to%20order%20your%20pickles!', '_blank');
+    }
+
+    function contactUs() {
+        window.location.href = 'mailto:babitaspickles@example.com';
+    }
+</script>
+
+</body>
+</html>
